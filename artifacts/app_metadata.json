@@ -1,0 +1,323 @@
+{
+  "model": "M_XGB / Grid Search",
+  "metric": "ROC-AUC",
+  "cv_score": 0.8511108466214731,
+  "cv_std": 0.01759230950239283,
+  "test_metrics": {
+    "roc_auc": 0.8436215116218552,
+    "pr_auc": 0.656757736061691,
+    "accuracy": 0.805693950177936,
+    "precision": 0.671280276816609,
+    "recall": 0.521505376344086,
+    "f1": 0.5869894099848714
+  },
+  "threshold": 0.5,
+  "feature_order": [
+    "tenure",
+    "MonthlyCharges",
+    "TotalCharges",
+    "gender",
+    "SeniorCitizen",
+    "Partner",
+    "Dependents",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod"
+  ],
+  "numeric": {
+    "tenure": {
+      "default": 29,
+      "min": 0,
+      "max": 72,
+      "integer": true
+    },
+    "MonthlyCharges": {
+      "default": 70.45,
+      "min": 18.25,
+      "max": 118.75,
+      "integer": false
+    },
+    "TotalCharges": {
+      "default": 1391.4,
+      "min": 0.0,
+      "max": 8684.8,
+      "integer": false
+    }
+  },
+  "categorical": {
+    "gender": {
+      "default": "Female",
+      "options": [
+        "Female",
+        "Male"
+      ]
+    },
+    "SeniorCitizen": {
+      "default": "No",
+      "options": [
+        "No",
+        "Yes"
+      ]
+    },
+    "Partner": {
+      "default": "No",
+      "options": [
+        "No",
+        "Yes"
+      ]
+    },
+    "Dependents": {
+      "default": "No",
+      "options": [
+        "No",
+        "Yes"
+      ]
+    },
+    "PhoneService": {
+      "default": "Yes",
+      "options": [
+        "Yes",
+        "No"
+      ]
+    },
+    "MultipleLines": {
+      "default": "No",
+      "options": [
+        "No",
+        "Yes",
+        "No phone service"
+      ]
+    },
+    "InternetService": {
+      "default": "Fiber optic",
+      "options": [
+        "Fiber optic",
+        "DSL",
+        "No"
+      ]
+    },
+    "OnlineSecurity": {
+      "default": "No",
+      "options": [
+        "No",
+        "Yes",
+        "No internet service"
+      ]
+    },
+    "OnlineBackup": {
+      "default": "No",
+      "options": [
+        "No",
+        "Yes",
+        "No internet service"
+      ]
+    },
+    "DeviceProtection": {
+      "default": "No",
+      "options": [
+        "No",
+        "Yes",
+        "No internet service"
+      ]
+    },
+    "TechSupport": {
+      "default": "No",
+      "options": [
+        "No",
+        "Yes",
+        "No internet service"
+      ]
+    },
+    "StreamingTV": {
+      "default": "No",
+      "options": [
+        "No",
+        "Yes",
+        "No internet service"
+      ]
+    },
+    "StreamingMovies": {
+      "default": "No",
+      "options": [
+        "No",
+        "Yes",
+        "No internet service"
+      ]
+    },
+    "Contract": {
+      "default": "Month-to-month",
+      "options": [
+        "Month-to-month",
+        "Two year",
+        "One year"
+      ]
+    },
+    "PaperlessBilling": {
+      "default": "Yes",
+      "options": [
+        "Yes",
+        "No"
+      ]
+    },
+    "PaymentMethod": {
+      "default": "Electronic check",
+      "options": [
+        "Electronic check",
+        "Mailed check",
+        "Bank transfer (automatic)",
+        "Credit card (automatic)"
+      ]
+    }
+  },
+  "consistency_samples": [
+    {
+      "caso": "Acerto expressivo (churn)",
+      "indice_teste": 2203,
+      "inputs": {
+        "tenure": 1,
+        "MonthlyCharges": 100.8,
+        "TotalCharges": 100.8,
+        "gender": "Female",
+        "SeniorCitizen": "Yes",
+        "Partner": "Yes",
+        "Dependents": "No",
+        "PhoneService": "Yes",
+        "MultipleLines": "Yes",
+        "InternetService": "Fiber optic",
+        "OnlineSecurity": "No",
+        "OnlineBackup": "No",
+        "DeviceProtection": "Yes",
+        "TechSupport": "No",
+        "StreamingTV": "Yes",
+        "StreamingMovies": "Yes",
+        "Contract": "Month-to-month",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Electronic check"
+      },
+      "y_true": 1,
+      "y_pred": 1,
+      "proba": 0.9349176287651062
+    },
+    {
+      "caso": "Acerto expressivo (permanece)",
+      "indice_teste": 5007,
+      "inputs": {
+        "tenure": 72,
+        "MonthlyCharges": 19.7,
+        "TotalCharges": 1379.8,
+        "gender": "Female",
+        "SeniorCitizen": "No",
+        "Partner": "Yes",
+        "Dependents": "Yes",
+        "PhoneService": "Yes",
+        "MultipleLines": "No",
+        "InternetService": "No",
+        "OnlineSecurity": "No internet service",
+        "OnlineBackup": "No internet service",
+        "DeviceProtection": "No internet service",
+        "TechSupport": "No internet service",
+        "StreamingTV": "No internet service",
+        "StreamingMovies": "No internet service",
+        "Contract": "Two year",
+        "PaperlessBilling": "No",
+        "PaymentMethod": "Credit card (automatic)"
+      },
+      "y_true": 0,
+      "y_pred": 0,
+      "proba": 0.006231639999896288
+    },
+    {
+      "caso": "Fronteira (p ≈ 0,5)",
+      "indice_teste": 2924,
+      "inputs": {
+        "tenure": 33,
+        "MonthlyCharges": 105.35,
+        "TotalCharges": 3465.05,
+        "gender": "Female",
+        "SeniorCitizen": "Yes",
+        "Partner": "No",
+        "Dependents": "Yes",
+        "PhoneService": "Yes",
+        "MultipleLines": "Yes",
+        "InternetService": "Fiber optic",
+        "OnlineSecurity": "No",
+        "OnlineBackup": "Yes",
+        "DeviceProtection": "Yes",
+        "TechSupport": "No",
+        "StreamingTV": "Yes",
+        "StreamingMovies": "Yes",
+        "Contract": "Month-to-month",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Bank transfer (automatic)"
+      },
+      "y_true": 0,
+      "y_pred": 1,
+      "proba": 0.500296950340271
+    },
+    {
+      "caso": "Erro mais confiante (difícil)",
+      "indice_teste": 6705,
+      "inputs": {
+        "tenure": 64,
+        "MonthlyCharges": 70.2,
+        "TotalCharges": 4481.0,
+        "gender": "Female",
+        "SeniorCitizen": "Yes",
+        "Partner": "No",
+        "Dependents": "No",
+        "PhoneService": "Yes",
+        "MultipleLines": "No",
+        "InternetService": "DSL",
+        "OnlineSecurity": "Yes",
+        "OnlineBackup": "Yes",
+        "DeviceProtection": "No",
+        "TechSupport": "Yes",
+        "StreamingTV": "Yes",
+        "StreamingMovies": "No",
+        "Contract": "Two year",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Credit card (automatic)"
+      },
+      "y_true": 1,
+      "y_pred": 0,
+      "proba": 0.013463917188346386
+    },
+    {
+      "caso": "Acerto típico (aleatório)",
+      "indice_teste": 2220,
+      "inputs": {
+        "tenure": 33,
+        "MonthlyCharges": 39.1,
+        "TotalCharges": 1309.0,
+        "gender": "Male",
+        "SeniorCitizen": "No",
+        "Partner": "No",
+        "Dependents": "No",
+        "PhoneService": "No",
+        "MultipleLines": "No phone service",
+        "InternetService": "DSL",
+        "OnlineSecurity": "No",
+        "OnlineBackup": "Yes",
+        "DeviceProtection": "No",
+        "TechSupport": "No",
+        "StreamingTV": "Yes",
+        "StreamingMovies": "No",
+        "Contract": "One year",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Electronic check"
+      },
+      "y_true": 0,
+      "y_pred": 0,
+      "proba": 0.16255812346935272
+    }
+  ]
+}
