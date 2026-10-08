@@ -6,11 +6,10 @@ Data Science e Statistical Computing · FIAP 2026 · Prof. Jones Egydio
 
 | Nome | RM |
 |---|---|
-| [Nome do Aluno 1] | [RM1] |
-| [Nome do Aluno 2] | [RM2] |
-| [Nome do Aluno 3] | [RM3] |
-| [Nome do Aluno 4] | [RM4] |
-| [Nome do Aluno 5] | [RM5] |
+| Camila Mendonça | RM565491 |
+| Sidyellen Garcia | RM566408 |
+| Júlia Silva | RM564670 |
+| Luana Luo | RM562271 |
 
 ## Resumo do problema
 
